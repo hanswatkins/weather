@@ -29,7 +29,7 @@ const Search = (props) => {
         direction='column'
         justifyContent='center'
         alignItems='center'
-        marginTop={15}
+        marginTop={10}
       >
         <Card sx={{ maxWidth: 300, minWidth: 300, backgroundColor: '#eceff1' }}>
           <CardContent>

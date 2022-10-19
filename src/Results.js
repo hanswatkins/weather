@@ -13,7 +13,7 @@ const Results = ({ searchParams }) => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    const url = `http://api.weatherapi.com/v1/current.json?key=6e847237301a49e6a60182831221210&q=${requestedSearch}}&aqi=no`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=6e847237301a49e6a60182831221210&q=${requestedSearch}}&aqi=no`;
     axios
       .get(url)
       .then(function (results) {

@@ -31,9 +31,14 @@ const Search = (props) => {
         alignItems='center'
         marginTop={28}
       >
-        <Card sx={{ maxWidth: 300, minWidth: 300 }}>
+        <Card sx={{ maxWidth: 300, minWidth: 300, backgroundColor: '#eceff1' }}>
           <CardContent>
-            <Typography variant='h5'>Search for a City or Postal Code</Typography>
+            <Typography
+              variant='body1'
+              style={{ paddingTop: '1rem', paddingBottom: '1.5rem' }}
+            >
+              Search for a City or Postal Code:
+            </Typography>
 
             <form autoComplete='off' onSubmit={handleSubmit}>
               <Textfield

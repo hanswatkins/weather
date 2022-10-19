@@ -15,8 +15,8 @@ function App() {
   return (
     <div className='App'>
       <header>
-        <Typography variant='h3' style={{ marginTop: '1rem' }}>
-          <Link to='/'>What's The Weather?</Link>
+        <Typography variant='h2' className='title'>
+          <Link to='/'>&#x2601; What's The Weather? &#x2600;</Link>
         </Typography>
       </header>
       <Routes>

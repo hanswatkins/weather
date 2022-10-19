@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
@@ -59,7 +57,10 @@ const Results = ({ searchParams }) => {
         alignItems='center'
         marginTop={23}
       >
-        <Card sx={{ maxWidth: 450, minWidth: 275 }}>
+        <Card
+          className='card'
+          sx={{ maxWidth: 450, minWidth: 275, backgroundColor: '#eceff1' }}
+        >
           <CardContent>
             <div>
               <p>Showing results for '{requestedSearch}':</p>

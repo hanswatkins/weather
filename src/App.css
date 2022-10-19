@@ -3,10 +3,16 @@
 }
 
 html {
-  background-color: #f0f0f0;
+  background-color: #cfd8dc;
+}
+
+.title {
+  color: #eceff1;
+  background-color: #263238;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #cfd8dc;
+  background-color: #263238;
 }

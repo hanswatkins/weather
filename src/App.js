@@ -16,7 +16,9 @@ function App() {
     <div className='App'>
       <header>
         <Typography variant='h2' className='title'>
-          <Link to='/'>&#x2601; What's The Weather? &#x2600;</Link>
+          <Link to='/'>
+            &#x2601; <b>What's The Weather?</b> &#x2600;
+          </Link>
         </Typography>
       </header>
       <Routes>

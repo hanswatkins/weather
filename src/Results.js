@@ -72,7 +72,7 @@ const Results = ({ searchParams }) => {
                 alt='weather icon'
               ></img>
               <Typography variant='body1'>
-                Conditions: {results.data.current.condition.text}
+                <b>{results.data.current.condition.text}</b>
               </Typography>
               <Typography variant='body1'>
                 Temperature: {results.data.current.temp_f} &deg;F

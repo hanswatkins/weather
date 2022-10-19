@@ -55,7 +55,7 @@ const Results = ({ searchParams }) => {
         direction='row'
         justifyContent='center'
         alignItems='center'
-        marginTop={23}
+        marginTop={15}
       >
         <Card
           className='card'

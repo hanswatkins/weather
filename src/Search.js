@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useSearchParams } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Textfield from '@mui/material/TextField';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 const Search = (props) => {
   const [searchString, setSearchString] = useState('');
@@ -19,17 +24,36 @@ const Search = (props) => {
   }
   return (
     <div className='weather-search'>
-      <h2>Search for a City</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='searchString'>Search: </label>
-        <input
-          type='text'
-          id='searchString'
-          name='searchString'
-          onChange={handleChange}
-        />
-        <button type='submit'>Search</button>
-      </form>
+      <Grid
+        container
+        direction='column'
+        justifyContent='center'
+        alignItems='center'
+        marginTop={28}
+      >
+        <Card sx={{ maxWidth: 300, minWidth: 300 }}>
+          <CardContent>
+            <Typography variant='h5'>Search for a City or Postal Code</Typography>
+
+            <form autoComplete='off' onSubmit={handleSubmit}>
+              <Textfield
+                id='outlined-name'
+                label='City'
+                onChange={handleChange}
+              />
+              <p></p>
+              <Button
+                variant='contained'
+                type='submit'
+                size='large'
+                disableElevation
+              >
+                Search
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+      </Grid>
     </div>
   );
 };

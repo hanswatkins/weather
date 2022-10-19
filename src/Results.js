@@ -2,6 +2,12 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 const Results = ({ searchParams }) => {
   const requestedSearch = searchParams.get('query');
@@ -46,20 +52,41 @@ const Results = ({ searchParams }) => {
 
   return (
     <div className='results-body'>
-      <div>
-        <p>Showing results for '{requestedSearch}':</p>
-        <h1>
-          {results.data.location.name}, {results.data.location.region}
-        </h1>
-        <img src={results.data.current.condition.icon} alt='weather icon'></img>
-        <p>Conditions: {results.data.current.condition.text}</p>
-        <p>Temperature: {results.data.current.temp_f} F</p>
-        <p>UV Index: {results.data.current.uv}</p>
-        <p>
-          Wind: {results.data.current.wind_mph} mph{' '}
-          {results.data.current.wind_dir}
-        </p>
-      </div>
+      <Grid
+        container
+        direction='row'
+        justifyContent='center'
+        alignItems='center'
+        marginTop={23}
+      >
+        <Card sx={{ maxWidth: 450, minWidth: 275 }}>
+          <CardContent>
+            <div>
+              <p>Showing results for '{requestedSearch}':</p>
+              <Typography variant='h4'>
+                {results.data.location.name}, {results.data.location.region}
+              </Typography>
+              <img
+                src={results.data.current.condition.icon}
+                alt='weather icon'
+              ></img>
+              <Typography variant='body1'>
+                Conditions: {results.data.current.condition.text}
+              </Typography>
+              <Typography variant='body1'>
+                Temperature: {results.data.current.temp_f} &deg;F
+              </Typography>
+              <Typography variant='body1'>
+                UV Index: {results.data.current.uv}
+              </Typography>
+              <Typography variant='body1'>
+                Wind: {results.data.current.wind_mph} mph{' '}
+                {results.data.current.wind_dir}
+              </Typography>
+            </div>
+          </CardContent>
+        </Card>
+      </Grid>
     </div>
   );
 };

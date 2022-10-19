@@ -3,6 +3,11 @@ import { Link, Routes, Route } from 'react-router-dom';
 import Search from './Search';
 import Results from './Results.js';
 import { useSearchParams } from 'react-router-dom';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import Typography from '@mui/material/Typography';
 
 function App() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -10,9 +15,9 @@ function App() {
   return (
     <div className='App'>
       <header>
-        <h1>
+        <Typography variant='h3' style={{ marginTop: '1rem' }}>
           <Link to='/'>What's The Weather?</Link>
-        </h1>
+        </Typography>
       </header>
       <Routes>
         <Route

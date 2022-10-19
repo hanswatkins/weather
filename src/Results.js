@@ -55,11 +55,16 @@ const Results = ({ searchParams }) => {
         direction='row'
         justifyContent='center'
         alignItems='center'
-        marginTop={15}
+        marginTop={5}
       >
         <Card
           className='card'
-          sx={{ maxWidth: 450, minWidth: 275, backgroundColor: '#eceff1' }}
+          sx={{
+            maxWidth: 450,
+            minWidth: 275,
+            backgroundColor: '#eceff1',
+            padding: 2,
+          }}
         >
           <CardContent>
             <div>

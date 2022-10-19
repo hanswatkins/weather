@@ -8,6 +8,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Typography from '@mui/material/Typography';
+import image from './3.jpg';
 
 function App() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -15,9 +16,14 @@ function App() {
   return (
     <div className='App'>
       <header>
-        <Typography variant='h2' className='title'>
+        <Typography
+          variant='h3'
+          className='title'
+          sx={{ padding: 5 }}
+          
+        >
           <Link to='/'>
-            &#x2601; <b>What's The Weather?</b> &#x2600;
+            <b>What's The Weather?</b> &#x2601;
           </Link>
         </Typography>
       </header>

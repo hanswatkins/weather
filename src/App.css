@@ -5,6 +5,8 @@
 html {
   background-color: #cfd8dc;
   background-image: url(./bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -14,4 +16,12 @@ html {
 a {
   text-decoration: none;
   color: white;
+}
+
+@media screen 
+   and (max-width : 1524px) {
+   html {
+    background-position: center;
+    background-size:unset;
+   }
 }

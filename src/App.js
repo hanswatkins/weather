@@ -8,7 +8,6 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Typography from '@mui/material/Typography';
-import image from './3.jpg';
 
 function App() {
   const [searchParams, setSearchParams] = useSearchParams();

@@ -4,15 +4,14 @@
 
 html {
   background-color: #cfd8dc;
+  background-image: url(./bg.jpg);
 }
 
 .title {
   color: #eceff1;
-  background-color: #263238;
 }
 
 a {
   text-decoration: none;
-  color: #cfd8dc;
-  background-color: #263238;
+  color: white;
 }
